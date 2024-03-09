@@ -4,11 +4,11 @@ import { CiUser } from "react-icons/ci";
 import { CiSearch } from "react-icons/ci";
 import { CiShoppingCart } from "react-icons/ci";
 import { FaBars } from "react-icons/fa";
-import { FaPlus } from "react-icons/fa6";
-import { FaMinus } from "react-icons/fa";
+// import { FaPlus } from "react-icons/fa6";
+// import { FaMinus } from "react-icons/fa";
 import Sidebar from './Sidebar';
 import { useState } from 'react';
-import { SiD } from 'react-icons/si';
+// import { SiD } from 'react-icons/si';
 const Navbar = () => {
   const [show, setShow] = useState(false);
   const onshophover = () => {

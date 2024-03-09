@@ -1,11 +1,11 @@
 import React from 'react'
-import { FaGlobeEurope } from "react-icons/fa";
+// import { FaGlobeEurope } from "react-icons/fa";
 import { CiUser } from "react-icons/ci";
 import { CiSearch } from "react-icons/ci";
-import { CiShoppingCart } from "react-icons/ci";
-import { FaBars } from "react-icons/fa";
+// import { CiShoppingCart } from "react-icons/ci";
+// import { FaBars } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa6";
-import { FaMinus } from "react-icons/fa";
+// import { FaMinus } from "react-icons/fa";
 
 const Sidebar = () => {
   return (
