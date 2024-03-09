@@ -3,20 +3,35 @@ import { FaGlobeEurope } from "react-icons/fa";
 import { CiUser } from "react-icons/ci";
 import { CiSearch } from "react-icons/ci";
 import { CiShoppingCart } from "react-icons/ci";
-// import { useState } from 'react';
+import { FaBars } from "react-icons/fa";
+import { FaPlus } from "react-icons/fa6";
+import { FaMinus } from "react-icons/fa";
+import Sidebar from './Sidebar';
+import { useState } from 'react';
+import { SiD } from 'react-icons/si';
 const Navbar = () => {
-  // const [show, setShow] = useState(false);
-  // const onshophover = () => {
-  //   setShow(!show);
-  // }
+  const [show, setShow] = useState(false);
+  const onshophover = () => {
+    setShow(!show);
+  }
+  const [bar, setBar] = useState(false);
+  const barchange = () => {
+    setBar(!bar);
+  }
+  const closesidebar = () => {
+    setBar(!bar);
+  }
   return (
     <div>
+        {bar && <Sidebar/>}
+    <div className='mainnav'>
     <div className="nav">
         <div className='nav-item1'>
             <div className='nav-item11'>
             <img src="https://i.pinimg.com/originals/a2/4e/d1/a24ed1a9e230248c45b8c30df1319732.jpg" alt="logo" />
             <ul className='left-item'>
-                <li className='shop'>SHOP
+                <li className='shop' onMouseEnter={onshophover
+                } onMouseLeave={onshophover}>SHOP
                 </li>
                 <li className="propicks">PRO PICKS</li>
                 <li className="insideskullcandy">INSIDE SKULLCANDY</li>
@@ -32,8 +47,23 @@ const Navbar = () => {
             <span className='common'> <CiShoppingCart /></span>
         </div>
     </div>
+    </div>
+    <div className='mainnavsized'>
+    <div className="nav-sized" onClick={closesidebar}>
+      <span onClick={barchange}>
+      <FaBars/>
+      </span>
+      <img src="https://i.pinimg.com/originals/a2/4e/d1/a24ed1a9e230248c45b8c30df1319732.jpg" alt="logo" />
+      <CiShoppingCart size={20}/>
+      </div>
+    </div>
+
+
+
+
+
 {/* this shophover needs to be showed when hovered in shop text present in navigation */}
-    <div className='shophover'>
+    {show && <div className='shophover'>
         <div className='shophover1'>
             <ul className='shophover11'>
               <li>New Arrivals</li>
@@ -64,7 +94,7 @@ const Navbar = () => {
               </div>
             </div>
         </div>
-    </div>
+    </div>}
     {/*  */}
     </div>
   )

@@ -2,6 +2,7 @@ import React from 'react'
 
 const Layout1 = () => {
   return (
+    
     <div className='layout1'>
         <div className='first'>
         <img src="https://images.prismic.io/skullcandy/d729902d-aa77-4699-85e0-57147db60885_1_desktop_EcoBuds_6.jpg?auto=compress,format" alt="" />
